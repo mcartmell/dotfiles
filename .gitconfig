@@ -1,0 +1,41 @@
+[core]
+  pager = less -r
+[diff]
+	renamelimit = 5000
+[color]
+  ui = auto
+  interactive = auto
+[alias]
+  s = status -uno
+  sc = svn dcommit
+  scd = svn dcommit --dry-run
+  sd = svn dcommit --dry-run
+  sp = stash pop
+  a = !git add . && git status
+  au = !git add -u . && git status
+  aa = !git add . && git add -u . && git status
+  c = commit
+  cm = commit -m
+  ca = commit --amend # careful
+  co = checkout
+  ac = !git add . && git commit
+  acm = !git add . && git commit -m
+  l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  ll = log --stat --abbrev-commit
+  d = diff --color-words
+  ds = diff --staged
+  dh = diff --color-words head
+  master = checkout master
+  spull = svn rebase
+  sr    = svn rebase
+  spush = svn dcommit
+  up = merge master
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	tags = tag -l
+[merge]
+  log = true
+[user]
+	name = Mike Cartmell
+	email = mike@mikec.me
+[push]
+	default = simple

@@ -1,0 +1,21 @@
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = git@github.com:Lokaltog/powerline-fonts.git
+[submodule ".vim/pack/themes/opt/solarized8"]
+	path = .vim/pack/themes/opt/solarized8
+	url = git@github.com:lifepillar/vim-solarized8.git
+[submodule ".vim/dist/start/vim-airline-themes"]
+	path = .vim/dist/start/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule ".vim/plugins/start/vim-airline"]
+	path = .vim/plugins/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
+[submodule ".vim/plugins/start/ale"]
+	path = .vim/plugins/start/ale
+	url = git@github.com:dense-analysis/ale.git
+[submodule ".vim/plugins/start/nerdtree"]
+	path = .vim/plugins/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule ".vim/plugins/start/vim-goimports"]
+	path = .vim/plugins/start/vim-goimports
+	url = git@github.com:mattn/vim-goimports.git

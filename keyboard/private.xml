@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Swap left shift to hash</name>
+    <identifier>private.left_shift_to_hash</identifier>
+    <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::KEY_3, ModifierFlag::OPTION_L</autogen>
+  </item>
+</root>

@@ -16,7 +16,7 @@ Prerequisites:
 
 Installation:
 
-* link ~/.vim/bundle and ~/.vim/autoload/pathogen.vim
+* link ~/.vim
 * link ~/_vimrc
 * set shell to fish
 * link ~/config/fish/config.fish
@@ -33,3 +33,16 @@ New:
 Get copy/paste working:
 
 * http://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
+
+# Unix tools to install
+
+* cat -> bat
+* diff pager -> delta
+* du -> dust
+* find -> fd
+* grep -> ripgrep
+* ls -> exa
+* ps -> procs
+* top -> htop
+* fzf
+

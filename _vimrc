@@ -64,6 +64,7 @@ let NERDTreeQuitOnOpen = 1
 let g:NERDTreeChDirMode=2
 
 " goimports
+let g:goimports = 1
 let g:goimports_simplify = 1
 let g:goimports_simplify_cmd = 'gofumpt'
 

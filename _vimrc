@@ -4,7 +4,7 @@
 " ,tt - open new tab with file browser
 " ,tn - open new tab
 " ,f - open file browser
-" ,gd - go to file of code under cursor in new tab
+" gd - go to file of code under cursor in new tab
 " F4 - run linter
 " F5 - close linter window
 
@@ -43,11 +43,12 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 set laststatus=2
 
 " ale
-let g:ale_linters={'go': ['golangci-lint']}
+let g:ale_linters={'go': ['golangci-lint', 'gopls']}
 let g:ale_fix_on_save = 0
 let g:ale_go_golangci_lint_options = "-c ~/.golang-ci.yaml"
 let g:ale_go_golangci_lint_package = 0
 let g:airline#extensions#ale#enabled = 1
+let g:ale_completion_enabled = 1
 
 " solarized
 set termguicolors
@@ -68,41 +69,23 @@ let g:goimports = 1
 let g:goimports_simplify = 1
 let g:goimports_simplify_cmd = 'gofumpt'
 
-" Build on save
-augroup auto_go
-	autocmd!
-  autocmd User ALELintPost silent! :GoBuild!
-augroup end
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
-set completeopt-=preview
-
-autocmd FileType go nmap gd <Plug>(go-def-tab)
 " filetypes
 autocmd BufNewFile *.go 0r ~/.vim/skeleton.go
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd BufRead *.yml,*.yaml set filetype=yaml
-autocmd BufRead *.yml,*.yaml set ft=yaml
-autocmd BufRead *.tx setf html
-autocmd BufRead process set syntax=perl
-autocmd BufNewFile,BufRead *.tt setf tt2html
 :set pastetoggle=<F6>
 map ,tt :tabnew<CR>:NERDTreeToggle<CR>
 map ,tn :tabnew<CR>
-map ,f         :NERDTreeToggle<CR>
+map ,f :NERDTreeToggle<CR>
+map gd :ALEGoToDefinition -tab<CR>
 map <F3> :ALEPrevious<CR>
 map <F4> :ALENext<CR>
-map <F5> :ccl<CR>
+map <F5> :lcl<CR>
 map <S-tab> :tabprev<CR>
 map <tab> :tabnext<CR>
 map ; :FZF ~/go<CR>
 nnoremap <silent> gr :GoReferrers<cr>
-" Put these lines at the very end of your vimrc file.
 
 " Load all plugins now.
-" Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
 " Load all of the helptags now, after plugins have been loaded.
-" All messages and errors will be ignored.
 silent! helptags ALL

@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo apt install gcc g++ libncurses-dev ncdu htop libgit2-dev cmake rustc jq ripgrep
+cargo install bat du-dust exa fd-find git-delta procs starship

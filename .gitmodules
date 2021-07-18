@@ -19,3 +19,6 @@
 [submodule ".vim/plugins/start/vim-goimports"]
 	path = .vim/plugins/start/vim-goimports
 	url = git@github.com:mattn/vim-goimports.git
+[submodule ".vim/pack/dist/start/vim-airline"]
+	path = .vim/pack/dist/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline

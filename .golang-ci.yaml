@@ -1,0 +1,28 @@
+linters:
+  enable:
+    - bodyclose
+    - cyclop
+    - dupl
+    - durationcheck
+    - errorlint
+    - forcetypeassert
+    - funlen
+    - gochecknoglobals
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - godot
+    - golint
+    - gosec
+    - misspell
+    - nestif
+    - noctx
+    - revive
+    - rowserrcheck
+    - sqlclosecheck
+    - unconvert
+    - unparam
+    - vet
+    - wastedassign
+    - whitespace
+    - wrapcheck

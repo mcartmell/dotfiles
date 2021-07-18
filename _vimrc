@@ -44,8 +44,7 @@ set laststatus=2
 
 " ale
 let g:ale_linters={'go': ['golangci-lint']}
-let g:ale_fixers={'go': ['goimports']}
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_go_golangci_lint_options = "-c ~/.golang-ci.yaml"
 let g:ale_go_golangci_lint_package = 0
 let g:airline#extensions#ale#enabled = 1
@@ -67,20 +66,6 @@ let g:NERDTreeChDirMode=2
 " goimports
 let g:goimports_simplify = 1
 let g:goimports_simplify_cmd = 'gofumpt'
-
-" vim-go
-let g:go_fmt_autosave = 0
-let g:go_template_autocreate=0
-let g:go_def_mode='godef'
-let g:go_def_mapping_enabled = 0
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 0
-let g:go_highlight_types = 1
 
 " Build on save
 augroup auto_go

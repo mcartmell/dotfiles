@@ -47,7 +47,7 @@ let g:ale_linters={'go': ['golangci-lint']}
 let g:ale_fixers={'go': ['goimports']}
 let g:ale_fix_on_save = 1
 let g:ale_go_golangci_lint_options = "-c ~/.golang-ci.yaml"
-let g:ale_go_golangci_lint_package = 1
+let g:ale_go_golangci_lint_package = 0
 let g:airline#extensions#ale#enabled = 1
 
 " solarized
@@ -112,3 +112,11 @@ map <S-tab> :tabprev<CR>
 map <tab> :tabnext<CR>
 map ; :FZF ~/go<CR>
 nnoremap <silent> gr :GoReferrers<cr>
+" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
